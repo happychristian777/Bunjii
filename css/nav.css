@@ -1,0 +1,64 @@
+@charset "utf-8";
+/* hide the second menu */
+.second-level-menu
+{
+	display: none;
+}
+/* On hover, display the second menu */
+.top-level-menu li:hover > ul
+{
+    display: inline;
+}
+/* Remove bullet from all list items */
+.top-level-menu li  {
+	list-style: none;
+}
+/* Apply to all links inside the multi-level menu */
+.top-level-menu a 
+{
+	font-weight: bold;
+    text-decoration: none;
+	font-size: 20px;
+	/* Make the link cover the entire list item-container */
+	display: block;
+}
+.top-level-menu > li {
+	float: left;
+	height: 40px;
+	width: 130px;
+	background-color: #999999;
+}
+/* control padding, margin of top menu */
+.top-level-menu {
+	padding: 0 0 0 10px;
+	margin: 10px 0 0 0;
+}
+/* set height of <a> fill the <li> */
+.top-level-menu a 
+{
+	line-height: 40px;
+	padding: 0 0 0 10px;
+}
+/* white color for <a> */
+.top-level-menu a 
+{
+    color: #FFFFFF;
+}
+/* get rid of space between menus */
+.second-level-menu
+{
+	padding: 0;	
+}
+/* set color for second menu */
+.second-level-menu > li
+{
+    background: #999999;
+}
+/* hover settings for all <a> */
+.top-level-menu a:hover 
+{ 
+	color: #000000; 
+	background: #CCCCCC;
+}
+
+
