@@ -30,58 +30,46 @@
 <!doctype html>
 <html>
 <head>
-<meta charset="utf-8">
-<title>Bunjii -</title>
-<link href="css/styles.css" rel="stylesheet" type="text/css">
-<link href="css/nav.css" rel="stylesheet" type="text/css">
-<link href="css/rwd.css" rel="stylesheet" type="text/css">
-<link href="css/member.css" rel="stylesheet" type="text/css">
-<script src="js/member.js"></script>
-<script src="js/nav.js"></script>
+    <meta charset="utf-8">
+    <title>Login</title>
 </head>
 <body onLoad="run_first()">
-<?php include("include/nav.inc") ?>
-<div class="container">
-<form action="login.php" method="post">
-    <div class="row">
-    	<div class="col-12 col-s-12">
-            <h1>Login</h1>
-			<p>Please enter your email and password</p>
-		</div>
-	</div>
-    <div class="row">
-    	<div class="col-s-12 col-12">
-        	<label for="email">Email:</label>
-            <input type="email" id="email" name="email" 
-              size="35" maxlength="50" required />
+    <?php include("include/nav.inc") ?>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-s-12">
+                <h1>Sign in to your Account</h1>
+                <p>Please enter your email and password</p>
+            </div>
         </div>
+        <form class = "form-group" action="login.php" method="post">
+            <div class="row">
+                <div class="col-s-12 col-5">
+                    <label for="email">Email:</label>
+                    <input class="form-control" type="email" id="email" name="email" placeholder="Enter your email" required />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-s-12 col-5">
+                    <label for="password">Password:</label>
+                    <input class="form-control" type="password" id="password" name="password" placeholder="Enter your password" required />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-s-12 col-5">
+                    <input class="btn btn-primary" type="submit" id="submit" value="Submit" />
+                    <?php
+                        if(isset($error)) {
+                        echo "<p style=\"color: red;\">$error</p>";
+                        unset($error);
+                        }
+                    ?>
+                </div>
+            </div>
+        </form>
     </div>
-    <div class="row">
-    	<div class="col-s-12 col-12">
-        	<label for="password">Password:</label>
-            <input type="password" id="password" name="password" 
-              size="20" maxlength="20" required />
-        </div>
-    </div>
-    <div class="row">
-    	<div class="col-s-12 col-12">
-        	<label>&nbsp;</label>
-            <input type="submit" id="submit" value="Submit" />
-            <input type="reset" id="reset" value="Clear" />
-            <?php 
-				if(isset($error)) {
-				echo "<p style=\"color: red;\">$error</p>";
-				unset($error);
-				}
-			?>
-        </div>
-    </div>           
-</form>
-</div>
-<div class="row" id="footer">
-    <div class="col-s-12 col-12" id="footer-col1"><h2>Design By 007 - 2017</h2></div>
-</div>    
 </body>
+<?php include("include/footer.php") ?>
 </html>
 
 
