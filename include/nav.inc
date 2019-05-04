@@ -15,7 +15,11 @@
         <div class="navbar-nav">
             <a class="nav-item nav-link active" href="#">Home</a>
             <a class="nav-item nav-link" href="#">Venues</a>
-            <a class="nav-item nav-link" href="login.php">Login</a>
+            <?php if(isset($_SESSION['valid_user'])): ?>
+                <a class="nav-item nav-link" href="logout.php">Logout</a>
+            <?php else: ?>
+                <a class="nav-item nav-link" href="login.php">Login</a>
+            <?php endif; ?>
             <a class="nav-item nav-link" href="member.php">Sign Up</a>
         </div>
     </div>
