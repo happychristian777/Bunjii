@@ -12,7 +12,7 @@
 		</head>
 		<body>
 			<header>
-				<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+				<nav class="navbar navbar-expand-lg navbar-light bg-light">
                     <a class="nav-link" href="index.php">Home</a>
                     <a class="nav-link" href="#">About Us</a>
                     <a class="nav-link" href="#">Facilities</a>

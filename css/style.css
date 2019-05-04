@@ -32,8 +32,18 @@ h1{
 
 /* Bootstrap style changes */
 
+.bg-light {
+    background-color: #ffffff!important;
+}
+.navbar {
+    border-bottom:2px solid #000;
+}
 a.nav-link{
-    color: #FFFFFF;
+    color: #222222;
+}
+a.nav-link:hover{
+    color: #0069D9;
+    font-weight: 500;
 }
 .navbar{
     min-height: 80px;

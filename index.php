@@ -1,6 +1,7 @@
 <?php require "header.php" ?>
 
 	<main>
+        <div class="container">
 		<?php 
 		if (isset($_SESSION['userId'])) {
 			echo'<p>You are logged in!</p>';
@@ -9,7 +10,7 @@
 			echo'<p>You are logged out!</p>';
 		}
 		?>
-      <!--  <img class="coverphoto" src="images/cover.jpg" style="background-size:cover;"> --!>
+        </div>
 	</main>
 
 <?php require "footer.php" ?>

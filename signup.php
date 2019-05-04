@@ -24,9 +24,11 @@
                        else if($_GET['error'] == "usertaken"){
                            echo '<p class="errorclass">Username is already taken</p>';
                        }
-                   else if($_GET['signup'] == "success"){
-                       echo '<p class="successclass">You successfully signed up</p>';
-                   }
+                       }
+                    else if (isset($_GET['signup'])){
+                        if ($_GET['signup'] == "success") {
+                            echo '<p class="successclass">You have successfully signed up <a href="login.php">Login now</a></p>';
+                        }
                    }
             ?>
             <form action="include/signup.inc.php" method="post">
