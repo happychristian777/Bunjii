@@ -1,0 +1,55 @@
+h1{
+    font-size: 36px;
+    padding-top: 20px;
+}
+::placeholder{
+    font-size: 14px;
+}
+.loginform{
+    border-radius: 3px;
+    border: 0px;
+    font-size: 14px;
+    padding: 7px ;
+    background-color: #D2DAE7;
+}
+.coverphoto{
+    width: 100%;
+    margin-top: -100px;
+}
+.menubuttons{
+    padding: 7px 40px 7px 40px;
+    font-size: 14px;
+    float: left;
+    margin: 0 10px 0 10px;
+}
+
+.errorclass{
+    color: red;
+}
+.successclass{
+    color: green;
+}
+
+/* Bootstrap style changes */
+
+a.nav-link{
+    color: #FFFFFF;
+}
+.navbar{
+    min-height: 80px;
+}
+.row{
+    padding: 10px 0 10px 0;
+}
+.container{
+    padding-top: 10px;
+}
+.navbar-expand-lg {
+    justify-content: flex-end;
+}
+.btn{
+    width: 150px;
+}
+.form-control{
+    margin: 10px 0 10px 0;
+}

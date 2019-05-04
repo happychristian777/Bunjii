@@ -9,6 +9,7 @@
 			echo'<p>You are logged out!</p>';
 		}
 		?>
+      <!--  <img class="coverphoto" src="images/cover.jpg" style="background-size:cover;"> --!>
 	</main>
 
 <?php require "footer.php" ?>
