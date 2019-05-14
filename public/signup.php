@@ -25,10 +25,7 @@
             <input class=" btn btn-primary" type="submit" name="submit" id="submit"/>
         </form>
     </div>
-    <div class="col-md-7">
-        <?php echo "\database.php"?>
 
-    </div>
 </div>
 
 <?php include(SHARED_PATH . '/footer.php'); ?>

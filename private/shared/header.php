@@ -23,8 +23,8 @@
         <li><a href="#">About Us</a></li>
         <li><a href="#">Contact Us</a></li>
     </ul>
-    <?php if(isset($_SESSION['userid'])){ ?>
-        <a href="#" type="button">Logout</a>
+    <?php if(isset($_SESSION['user'])){ ?>
+        <a class="btn btn-primary menubuttons" href="<?php echo url_for("include/logout.inc")?>" name="login">Logout</a>
     <?php } else{ ?>
         <a class="btn btn-primary menubuttons" href="<?php echo url_for("login.php")?>" name="login">Login</a>
         <a class="btn btn-primary menubuttons" href="<?php echo url_for("signup.php")?>" name="signup">Sign Up</a>
