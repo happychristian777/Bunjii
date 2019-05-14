@@ -1,0 +1,45 @@
+*{
+    font-family: Calibri;
+}
+nav{
+    border-bottom: solid 2px;
+    min-height: 70px;
+}
+nav ul{
+    list-style: none;
+}
+nav li a{
+    float: left;
+    margin: 15px;
+    text-decoration: none;
+    color: #222222;
+}
+nav li a:hover{
+    color: #007bff;
+    text-decoration: none;
+}
+.menubuttons{
+    float: right;
+    margin: 10px 20px 10px 20px;
+}
+h1{
+    margin: 20px 0 10px 0;
+    font-size: 28px;
+}
+input{
+    margin: 0 0 10px 0;
+}
+#passwordMessage{
+    color: red !important;
+    margin: 10px 0 10px 0;
+}
+footer{
+    clear: both;
+}
+
+/* Bootstrap Changes */
+
+.btn{
+    width: 100px;
+    height: 35px;
+}
