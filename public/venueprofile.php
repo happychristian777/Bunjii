@@ -12,38 +12,71 @@ require_once ("../private/initialize.php");
 
         $id = $_SESSION['id'];
 
-        $sql_1 = "select * from venue where signupid='$id'";
-        $result_1 = mysqli_query($conn, $sql_1);
-        $row_1 = mysqli_fetch_assoc($result_1);
+        $venueSQL = "select * from venue where signupid='$id'";
+        $venueResult = mysqli_query($conn, $venueSQL);
+        $venue = mysqli_fetch_assoc($venueResult);
 
-        $venue_id = $row_1['venue_id'];
+        // Declaring venue id to a variable to use it to find courts and coaches
 
-        $sql_2 = "select * from courts where venue_id='$venue_id'";
-        $result_2 = mysqli_query($conn, $sql_2);
-        $row_2 = mysqli_fetch_assoc($result_2);
+        $venue_id = $venue['venue_id'];
 
+        $courtsSQL = "select * from courts where venue_id='$venue_id'";
+        $courtsResult = mysqli_query($conn, $courtsSQL);
 
+        $coachesSQL = "select * from coaches where venue_id='$venue_id'";
+        $coachesResult = mysqli_query($conn, $coachesSQL);
+
+        // Declaring court id to a variable to use it to find timings
+/*
+        while($courts = mysqli_fetch_assoc($courtsResult)) {
+
+            $court_id = $courts['court_id'];
+
+            $timingsSQL = "select * from timings where court_id='$court_id'";
+            $timingsResult = mysqli_query($conn, $timingsSQL);
+        } */
     }
 ?>
 <div class="container">
-    <h1>My Profile</h1>
+    <h1>PROFILE</h1>
     <hr>
-    <h2><?php echo $row_1['venue_name'];?></h2>
+    <h2><?php echo $venue['venue_name'];?></h2>
     <table>
         <tr>
-            <td><strong>Description: </strong></td>
-            <td class="profiletable"><?php echo $row_1['venue_desc']?></td>
+            <td><strong>Description</strong></td>
+            <td class="profiletable"><?php echo $venue['venue_desc']?></td>
         </tr>
         <tr>
-            <td><strong>Phone: </strong></td>
-            <td class="profiletable"><?php echo $row_1['venue_phone'] ?></td>
+            <td><strong>Phone</strong></td>
+            <td class="profiletable"><?php echo $venue['venue_phone'] ?></td>
         </tr>
     </table>
     <hr>
     <h2>Courts</h2>
+    <?php while($courts = mysqli_fetch_assoc($courtsResult)) { ?>
     <table>
-        <td><strong>Court Name:</strong></td>
-        <td class="profiletable"><?php echo $row_2['court_name'] ?></td>
+        <tr>
+            <td><strong>Court <?php echo $courts['court_id']; ?></strong></td>
+            <td class="profiletable"><?php echo $courts['court_name']; ?></td>
+        </tr>
     </table>
+    <?php } ?>
+    <hr>
+    <h2>Coaches</h2>
+    <?php while($coaches = mysqli_fetch_assoc($coachesResult)) { ?>
+        <table>
+            <tr>
+                <td><strong>Coach <?php echo $coaches['coach_id']; ?></strong></td>
+                <td class="profiletable"><?php echo $coaches['coach_name']; ?></td>
+            </tr>
+            <tr>
+                <td><strong>Description</strong></td>
+                <td class="profiletable"><?php echo $coaches['coach_desc']; ?></td>
+            </tr>
+        </table>
+    <?php } ?>
+
+
+
 
 </div>

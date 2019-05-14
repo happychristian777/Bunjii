@@ -37,6 +37,7 @@ table{
 table td{
     vertical-align: top;
     padding-top: 10px;
+    min-width: 100px;
 }
 
 /* Custom */

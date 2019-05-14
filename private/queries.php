@@ -34,6 +34,8 @@ INSERT INTO `venue`(`venue_id`, `signupid`, `venue_name`, `venue_desc`, `venue_p
 ',0435661027)
 
 INSERT INTO `courts`(`venue_id`, `court_id`, `court_name`) VALUES (1,1, 'Green Court');
+INSERT INTO `courts`(`venue_id`, `court_id`, `court_name`) VALUES (1,2, 'Red Court');
+
 
 INSERT INTO `timings`(`court_id`, `timing_id`, `time_range`) VALUES (1, 1, '9.00 - 10.00');
 INSERT INTO `timings`(`court_id`, `timing_id`, `time_range`) VALUES (1, 2, '10.00 - 11.00');
