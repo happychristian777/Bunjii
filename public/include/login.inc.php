@@ -28,7 +28,12 @@
             }
             else if($passwordCheck == true){
                 session_start();
-                $_SESSION['user'] = '$email';
+
+                $email = $row['email'];
+                $id = $row['signupid'];
+
+                $_SESSION['user'] = $email;
+                $_SESSION['id'] = $id;
                 redirect_to('../index.php?login=success');
             }
             else{

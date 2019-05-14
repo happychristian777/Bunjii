@@ -24,7 +24,8 @@
         <li><a href="#">Contact Us</a></li>
     </ul>
     <?php if(isset($_SESSION['user'])){ ?>
-        <a class="btn btn-primary menubuttons" href="<?php echo url_for("include/logout.inc")?>" name="login">Logout</a>
+        <a class="btn btn-primary menubuttons" href="<?php echo url_for("venueprofile.php")?>" name="logout">Profile</a>
+        <a class="btn btn-primary menubuttons" href="<?php echo url_for("include/logout.inc")?>" name="logout">Logout</a>
     <?php } else{ ?>
         <a class="btn btn-primary menubuttons" href="<?php echo url_for("login.php")?>" name="login">Login</a>
         <a class="btn btn-primary menubuttons" href="<?php echo url_for("signup.php")?>" name="signup">Sign Up</a>
