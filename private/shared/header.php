@@ -1,6 +1,10 @@
 <?php
     session_start();
     if(!isset($page_title)){ $page_title = 'Bunjii';}
+    if(!isset($home)){ $home = '';}
+    if(!isset($facilities)){ $facilities = '';}
+    if(!isset($about)){ $about = '';}
+    if(!isset($contact)){ $contact = '';}
         ?>
 
 <!DOCTYPE html>
@@ -18,13 +22,13 @@
 
 <nav>
     <ul>
-        <li><a href="<?php echo url_for('/index.php')?>">Home</a></li>
-        <li><a href="#">Facilities</a></li>
-        <li><a href="#">About Us</a></li>
-        <li><a href="#">Contact Us</a></li>
+        <li><a class="<?php echo $home ?>" href="<?php echo url_for('/index.php')?>">Home</a></li>
+        <li><a class="<?php echo $facilities ?>" href="<?php echo url_for('/facilities.php') ?>">Facilities</a></li>
+        <li><a class="<?php echo $about ?>" href="#">About Us</a></li>
+        <li><a class="<?php echo $contact ?>" href="#">Contact Us</a></li>
     </ul>
     <?php if(isset($_SESSION['user'])){ ?>
-        <a class="btn btn-primary menubuttons" href="<?php echo url_for("venueprofile.php")?>" name="logout">Profile</a>
+        <a class="btn btn-primary menubuttons" href="<?php echo url_for("profilecheck.php")?>" name="profile">Profile</a>
         <a class="btn btn-primary menubuttons" href="<?php echo url_for("include/logout.inc")?>" name="logout">Logout</a>
     <?php } else{ ?>
         <a class="btn btn-primary menubuttons" href="<?php echo url_for("login.php")?>" name="login">Login</a>

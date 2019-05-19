@@ -39,6 +39,9 @@ table td{
     padding-top: 10px;
     min-width: 100px;
 }
+img{
+  max-width: 100%;
+}
 
 /* Custom */
 
@@ -53,7 +56,37 @@ table td{
 }
 
 .profiletable{
-    padding-left: 20px;
+    padding-left: 5px;
+}
+
+.active{
+  color: #007bff;
+  font-weight: 600;
+}
+
+.homepage{
+  background-color: black;
+  background-image: url("/bunjii/public/images/cover.jpg");
+  background-size: cover;
+  min-height: 600px;
+}
+
+.mainscreen{
+   padding-top: 150px;
+   color: #fff;
+}
+
+.mainscreen h1{
+  font-size: 52px;
+}
+
+.mainform{
+  margin-top: 40px;
+}
+
+.introcontent{
+  padding: 0 40px 20px 40px;
+  border-radius: 7px;
 }
 
 /* Bootstrap Changes */
