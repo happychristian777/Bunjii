@@ -81,3 +81,5 @@ require_once ("../private/initialize.php");
     <?php } ?>
 
 </div>
+
+<?php include (SHARED_PATH.'/footer.php'); ?>
