@@ -22,10 +22,9 @@
             <label for="cPassword">Confirm Password</label>
             <input class = "form-control" type="password" id="cPassword" name="cPassword" value="" placeholder="Confirm your password"/>
             <small id="passwordMessage" class="form-text text-muted"></small>
-            <input class=" btn btn-primary" type="submit" name="submit" id="submit"/>
+            <input class="btn btn-primary" type="submit" name="submit" id="submit"/>
         </form>
     </div>
-
 </div>
 
 <?php include(SHARED_PATH . '/footer.php'); ?>

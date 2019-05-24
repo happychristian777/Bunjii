@@ -24,11 +24,18 @@
             $passwordCheck = password_verify($password, $row['password']);
 
             if($passwordCheck == false){
-                redirect_to('../login.php?error=wrongpassword&email='.$email.$row['password']);
+                redirect_to('../login.php?error=wrongpassword&email='.$email);
             }
             else if($passwordCheck == true){
                 session_start();
-                $_SESSION['user'] = '$email';
+
+                $email = $row['email'];
+                $id = $row['signupid'];
+                $type = $row['type'];
+
+                $_SESSION['user'] = $email;
+                $_SESSION['id'] = $id;
+                $_SESSION['type'] = $type;
                 redirect_to('../index.php?login=success');
             }
             else{
