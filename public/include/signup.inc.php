@@ -48,7 +48,7 @@
                 $profileresult = mysqli_query($conn, $profilesql);
 
                 mysqli_close($conn);
-                redirect_to('../login.php');
+                redirect_to('../login.php?login=success');
             }
         }
     }

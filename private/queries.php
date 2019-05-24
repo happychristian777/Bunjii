@@ -35,7 +35,7 @@ court_name TINYTEXT
 CREATE TABLE timings(
 court_id int(11) REFERENCES court(court_id),
 timing_id int(11) PRIMARY KEY,
-time_range TIME
+time_range TINYTEXT
 );
 
 CREATE TABLE coaches(
