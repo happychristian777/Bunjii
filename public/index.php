@@ -7,12 +7,7 @@
     require_once ("../private/initialize.php");
     include (SHARED_PATH.'/header.php');
 ?>
-<<<<<<< HEAD
 
-<div id="content">
-    <h1>Hello</h1>
-</div>
-=======
 <main class="homepage">
   <div class="container mainscreen">
     <div class="row">
@@ -31,6 +26,5 @@
     </div>
   </div>
 </main>
->>>>>>> 877ba9d16ada42fcc805f90e168fb436f0da7332
 
 <?php include (SHARED_PATH.'/footer.php'); ?>
