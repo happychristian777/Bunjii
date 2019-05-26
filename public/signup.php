@@ -11,6 +11,22 @@
     <hr>
     <div class="col-md-5">
         <form action="<?php echo url_for('/include/signup.inc.php')?>" method="POST">
+            <?php
+                if(isset($_GET['error'])){
+                    if($_GET['error'] == 'emptyfeilds'){
+                        echo "<p class='text-danger'>Please fill all the fields</p>";
+                    }
+                    else if($_GET['error'] == 'invalidemail'){
+                        echo "<p class='text-danger'>Please enter a valid email</p>";
+                    }
+                    else if($_GET['error'] == 'passwordsdonotmatch'){
+                        echo "<p class='text-danger'>Your passwords do not match</p>";
+                    }
+                    else if($_GET['error'] == 'userexists'){
+                        echo "<p class='text-danger'>User already exists</p>";
+                    }
+                }
+            ?>
             <label for="name">Name</label>
             <input class = "form-control" type="text" id="name" name="name" value="<?php echo $name;?>" placeholder="Enter your first name" />
             <small id="nMessage" class="form-text text-muted"></small>

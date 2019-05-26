@@ -99,3 +99,7 @@ img{
     width: 100px;
     height: 35px;
 }
+
+textarea.form-control {
+    height: 200px;
+}
