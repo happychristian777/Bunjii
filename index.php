@@ -8,7 +8,7 @@
     include ('header.php');
 ?>
 
-<main class="homepage">
+<div class="homepage">
   <div class="container mainscreen">
     <div class="row">
       <div class="introcontent col-md-8">
@@ -28,7 +28,7 @@
       </div>
     </div>
   </div>
-</main>
+</div>
 <section>
   <div class="container">
     <h1>FACILITIES</h1>

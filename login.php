@@ -25,7 +25,7 @@
                 echo "<p class='text-danger'>Please enter the correct password</p>";
             }
         }?>
-        <form action="<?php echo url_for('/include/login.inc.php')?>" method="POST">
+        <form action="include/login.inc.php" method="POST">
             <label for="email">E-Mail</label>
             <input class = "form-control" type="text" id="email" name="email" value="<?php echo $email?>" placeholder="Enter your email address" />
             <label for="password">Password</label>

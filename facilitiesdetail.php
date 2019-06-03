@@ -55,7 +55,7 @@ if(isset($_GET['id'])) {
                 <table>
                     <tr>
                         <td class="profiletable"><strong><?php echo $courts['court_name']; ?></strong></td>
-                            <td><a href=<?php echo url_for('booking.php?id=').$courts['court_id']; ?>>Book Now >></a></td>
+                            <td><a href="booking.php?id=<?php echo $courts['court_id']; ?>">Book Now >></a></td>
                     </tr>
                 </table>
             </div>
@@ -75,4 +75,3 @@ if(isset($_GET['id'])) {
     </div>
 
 <?php include ('footer.php'); ?>
-

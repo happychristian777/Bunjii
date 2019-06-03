@@ -11,7 +11,7 @@
     <hr>
     <div class="row">
     <div class="col-md-5">
-        <form action="<?php echo url_for('/include/signup.inc.php')?>" method="POST">
+        <form action="include/signup.inc.php" method="POST">
             <?php
                 if(isset($_GET['error'])){
                     if($_GET['error'] == 'emptyfeilds'){

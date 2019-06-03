@@ -24,7 +24,7 @@
             <div class="card-body">
               <h2><?php echo $venue['venue_name']; ?></h2>
               <p><?php echo substr($venue['venue_desc'], 0, 140); ?></p>
-              <a href="<?php echo url_for('facilitiesdetail.php?id=').$venue['venue_id'];?>" class="text-primary">View >></a>
+              <a href="facilitiesdetail.php?id=<?php echo $venue['venue_id'];?>" class="text-primary">View >></a>
             </div>
           </div>
          <?php } ?>
