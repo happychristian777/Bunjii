@@ -57,9 +57,7 @@ if(isset($_GET['id'])) {
                 <table>
                     <tr>
                         <td class="profiletable"><strong><?php echo $courts['court_name']; ?></strong></td>
-                        <?php if (isset($_SESSION['user'])){?>
                             <td><a href=<?php echo url_for('booking.php?id=').$courts['court_id']; ?>>Book Now >></a></td>
-                        <?php }?>
                     </tr>
                 </table>
             </div>

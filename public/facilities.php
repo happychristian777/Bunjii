@@ -21,7 +21,7 @@
 
           <div class="col-md-4">
               <h2><?php echo $venue['venue_name']; ?></h2>
-              <p><?php echo substr($venue['venue_desc'], 0, 100); ?></p>
+              <p><?php echo substr($venue['venue_desc'], 0, 140); ?></p>
               <a href="<?php echo url_for('facilitiesdetail.php?id=').$venue['venue_id'];?>" class="text-primary">View >></a>
               <p></p>
           </table>
