@@ -13,13 +13,13 @@
         $cPassword = mysqli_real_escape_string($conn, $_POST['cPassword']);
 
         if (empty($name) || empty($email) || empty($password)) {
-            redirect_to('../signup.php?error=emptyfeilds&name=' . $name . '&email=' . $email);
+            redirect_to('../customersignup.php?error=emptyfeilds&name=' . $name . '&email=' . $email);
         }
         else if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-            redirect_to('../signup.php?error=invalidemail&name=' . $name);
+            redirect_to('../customersignup.php?error=invalidemail&name=' . $name);
         }
         else if ($password != $cPassword) {
-            redirect_to('../signup.php?error=passwordsdonotmatch&name=' . $name . '&email=' . $email);
+            redirect_to('../customersignup.php?error=passwordsdonotmatch&name=' . $name . '&email=' . $email);
         }
         else {
 
@@ -27,7 +27,7 @@
             $result = mysqli_query($conn, $sql);
             $resultCheck = mysqli_num_rows($result);
             if($resultCheck > 0){
-                redirect_to('../signup.php?error=userexists&name='.$name);
+                redirect_to('../customersignup.php?error=userexists&name='.$name);
             }
 
             else{

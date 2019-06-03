@@ -33,7 +33,7 @@ if(isset($_GET['id'])) {
 ?>
 <div class="container">
     <h1>PROFILE</h1>
-    <hr>
+    <hr class="bg-primary accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
     <h2><?php echo $venue['venue_name'];?></h2>
     <table>
         <tr>
@@ -47,7 +47,7 @@ if(isset($_GET['id'])) {
     </table>
     <hr>
     <h2>Courts</h2>
-
+    <hr class="bg-primary accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
     <div class="row">
         <?php while ($courts = mysqli_fetch_assoc($courtsResult)) { ?>
 
@@ -66,6 +66,7 @@ if(isset($_GET['id'])) {
     <hr>
 
         <h2>Coaches</h2>
+        <hr class="bg-primary accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
             <?php while($coaches = mysqli_fetch_assoc($coachesResult)) { ?>
                 <table>
                      <td class="profiletable"><b><?php echo $coaches['coach_name']; ?></b></td>

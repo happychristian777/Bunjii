@@ -15,7 +15,7 @@
     <div class="row">
       <div class="col">
           <h1>SPORTS FACILITIES</h1>
-          <hr>
+          <hr class="bg-primary accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
           <div class="row">
           <?php while ($venue = mysqli_fetch_assoc($venueResult)) { ?>
 

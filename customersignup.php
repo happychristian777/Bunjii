@@ -1,17 +1,13 @@
-<?php
-    $page_title = 'Sign Up';
-    require_once("initialize.php");
-    include('header.php');
-    $name = isset($_GET['name']) ? $_GET['name'] : "";
-    $email = isset($_GET['email']) ? $_GET['email'] : "";
-?>
+<?php include('include/signupheader.php'); ?>
 
-<div class="container">
-    <h1>SIGN UP</h1>
-    <hr>
-    <div class="row">
-    <div class="col-md-5">
-        <form action="include/signup.inc.php" method="POST">
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+                <a class="nav-link active" href="customersignup.php">Player</a></li>
+            <li class="nav-item">
+                <a class="nav-link" href="venuesignup.php">Facility</a>
+            </li>
+        </ul>
+        <form action="include/customersignup.inc.php" method="POST">
             <?php
                 if(isset($_GET['error'])){
                     if($_GET['error'] == 'emptyfeilds'){

@@ -7,7 +7,7 @@
 
 <div class="container">
     <h1>LOGIN</h1>
-    <hr>
+    <hr class="bg-primary accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
     <div class="col-md-5">
         <?php if(isset($_GET['login'])){
             if($_GET['login'] === 'success'){
@@ -30,7 +30,7 @@
             <input class = "form-control" type="text" id="email" name="email" value="<?php echo $email?>" placeholder="Enter your email address" />
             <label for="password">Password</label>
             <input class = "form-control" type="password" id="password" name="password" placeholder="Enter your password"/>
-            <input class=" btn btn-primary" type="submit" name="submit" id="submit"/>
+            <input class=" btn btn-primary" type="submit" name="submit" id="submit" value="Login"/>
         </form>
     </div>
   </div>

@@ -21,6 +21,9 @@
 <body>
 
 <nav class="navbar navbar-expand-lg navbar-light">
+    <a class="nav-brand" href="index.php">
+    <img src="images/logo.jpg" style="width:60px;"/>
+    </a>
     <ul class="navbar-nav mr-auto">
         <li class="nav-item"><a class="nav-link <?php echo $home ?>" href="index.php">Home</a></li>
         <li class="nav-item"><a class="nav-link <?php echo $facilities ?>" href="facilities.php">Facilities</a></li>
@@ -32,7 +35,7 @@
         <a class="btn btn-primary my-2 my-sm-0 menubuttons" href="include/logout.inc" name="logout">Logout</a>
     <?php } else{ ?>
         <a class="btn btn-primary  my-2 my-sm-0 menubuttons" href="login.php" name="login">Login</a>
-        <a class="btn btn-primary my-2 my-sm-0 menubuttons" href="signup.php" name="signup">Sign Up</a>
+        <a class="btn btn-primary my-2 my-sm-0 menubuttons" href="customersignup.php" name="signup">Sign Up</a>
     <?php }?>
 
 </nav>

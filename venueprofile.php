@@ -36,7 +36,7 @@ require_once ("database.php");
             <a href="editvenue.php" class="text-primary">Edit Profile >></a>
         </div>
     </div>
-    <hr>
+    <hr class="bg-primary accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
     <h2><?php echo $venue['venue_name'];?></h2>
     <table>
         <tr>
@@ -50,6 +50,7 @@ require_once ("database.php");
     </table>
     <hr>
     <h2>Courts</h2>
+    <hr class="bg-primary accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
     <?php while($courts = mysqli_fetch_assoc($courtsResult)) { ?>
     <table>
         <tr>
@@ -71,6 +72,7 @@ require_once ("database.php");
     <?php } ?>
     <hr>
     <h2>Coaches</h2>
+    <hr class="bg-primary accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
     <?php while($coaches = mysqli_fetch_assoc($coachesResult)) { ?>
         <table>
             <tr>
