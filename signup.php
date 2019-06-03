@@ -9,6 +9,7 @@
 <div class="container">
     <h1>SIGN UP</h1>
     <hr>
+    <div class="row">
     <div class="col-md-5">
         <form action="<?php echo url_for('/include/signup.inc.php')?>" method="POST">
             <?php
@@ -41,6 +42,7 @@
             <input class="btn btn-primary" type="submit" name="submit" id="submit"/>
         </form>
     </div>
+  </div>
 </div>
 
 <?php include ('footer.php'); ?>

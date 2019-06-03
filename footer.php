@@ -42,9 +42,8 @@
         <h6 class="text-uppercase font-weight-bold">Contact</h6>
         <hr class="bg-primary accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
         <p>Brisbane, QLD, Australia</p>
-        <p>anjani.anusuri@my.jcu.edu.au | bhargav.bandi@my.jcu.edu.au</p>
-        <p>+ 61 435 661 027</p>
-        <p>+ 61 415 796 265</p>
+        <p>anjani.anusuri@my.jcu.edu.au</p>
+        <p>bhargav.bandi@my.jcu.edu.au</p>
       </div>
     </div>
   </div>

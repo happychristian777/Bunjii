@@ -82,6 +82,14 @@ main{
   min-height: 600px;
 }
 
+.signupcontent{
+  background-color: black;
+  background-image: url("/bunjii/images/signup.jpeg");
+  margin-top: -40px;
+  background-size: cover;
+  min-height: 600px;
+}
+
 .mainscreen{
    padding-top: 150px;
    color: #fff;
