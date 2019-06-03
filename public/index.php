@@ -7,11 +7,15 @@
     require_once ("../private/initialize.php");
     include (SHARED_PATH.'/header.php');
 ?>
+
 <main class="homepage">
   <div class="container mainscreen">
     <div class="row">
       <div class="introcontent col-md-8">
         <h1>BOOK ANY FACILITY WITH US</h1>
+        <?php  if(isset($_SESSION['name'])){
+            $name = $_SESSION['name'];
+            echo "<h2 class='text-primary'>Welcome $name</h2>"; }?>
         <p><italic>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eleifend a mauris ut tempus. Etiam lacinia lobortis tristique. Quisque dapibus sapien quis nunc consequat convallis.
         </italic></p>
       </div>

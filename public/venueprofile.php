@@ -29,7 +29,15 @@ require_once ("../private/initialize.php");
     }
 ?>
 <div class="container">
-    <h1>PROFILE</h1>
+    <div class="row">
+        <div class="col-md-10">
+            <h1>PROFILE</h1>
+        </div>
+        <div class="col-md-2">
+            <br>
+            <a href="editvenue.php" class="text-primary">Edit Profile >></a>
+        </div>
+    </div>
     <hr>
     <h2><?php echo $venue['venue_name'];?></h2>
     <table>
@@ -47,11 +55,9 @@ require_once ("../private/initialize.php");
     <?php while($courts = mysqli_fetch_assoc($courtsResult)) { ?>
     <table>
         <tr>
-            <td><strong>Court <?php echo $courts['court_id']; ?></strong></td>
-            <td class="profiletable"><?php echo $courts['court_name']; ?></td>
+            <td class="profiletable"><b><?php echo $courts['court_name']; ?></b></td>
         </tr>
         <tr>
-          <td></td>
             <?php
 
             // Declaring court id to a variable to use it to find timings
@@ -81,3 +87,5 @@ require_once ("../private/initialize.php");
     <?php } ?>
 
 </div>
+
+<?php include (SHARED_PATH.'/footer.php'); ?>

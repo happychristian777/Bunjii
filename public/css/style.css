@@ -50,6 +50,10 @@ img{
     margin: 10px 0 10px 0;
 }
 
+.success{
+    color: #
+}
+
 .menubuttons{
     float: right;
     margin: 10px 20px 10px 20px;
@@ -94,4 +98,8 @@ img{
 .btn{
     width: 100px;
     height: 35px;
+}
+
+textarea.form-control {
+    height: 200px;
 }
