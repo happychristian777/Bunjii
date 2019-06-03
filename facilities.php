@@ -4,8 +4,8 @@
     $facilities = 'active';
     $about = '';
     $contact = '';
-    require_once ("../private/initialize.php");
-    include (SHARED_PATH.'/header.php');
+    require_once ("initialize.php");
+    include ('header.php');
 
     $displayVenueSQL = "select * from venue";
     $venueResult = mysqli_query($conn, $displayVenueSQL);
@@ -19,12 +19,13 @@
           <div class="row">
           <?php while ($venue = mysqli_fetch_assoc($venueResult)) { ?>
 
-          <div class="col-md-4">
+          <div class="card" style="width:21rem; margin: 20px;">
+            <img class="card-img-top" src="images/sample.png" />
+            <div class="card-body">
               <h2><?php echo $venue['venue_name']; ?></h2>
               <p><?php echo substr($venue['venue_desc'], 0, 140); ?></p>
               <a href="<?php echo url_for('facilitiesdetail.php?id=').$venue['venue_id'];?>" class="text-primary">View >></a>
-              <p></p>
-          </table>
+            </div>
           </div>
          <?php } ?>
           </div>
@@ -33,4 +34,4 @@
   </div>
 </main>
 
-<?php include (SHARED_PATH.'/footer.php'); ?>
+<?php include ('footer.php'); ?>

@@ -1,7 +1,7 @@
 <?php
     $page_title = 'Login';
-    require_once("../private/initialize.php");
-    include(SHARED_PATH . '/header.php');
+    require_once("initialize.php");
+    include('header.php');
     $email = isset($_GET['email']) ? $_GET['email'] : "";
 ?>
 
@@ -18,6 +18,9 @@
             if($_GET['error'] === 'emptyfeilds'){
                 echo "<p class='text-danger'>Please fill all the fields</p>";
             }
+            else if($_GET['error'] === 'invalidemail'){
+                echo "<p class='text-danger'>Please enter a valid email</p>";
+            }
             else if($_GET['error'] === 'wrongpassword'){
                 echo "<p class='text-danger'>Please enter the correct password</p>";
             }
@@ -30,5 +33,6 @@
             <input class=" btn btn-primary" type="submit" name="submit" id="submit"/>
         </form>
     </div>
+  </div>
 
-<?php include(SHARED_PATH . '/footer.php'); ?>
+<?php include ('footer.php'); ?>

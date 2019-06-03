@@ -30,6 +30,7 @@ input{
 }
 footer{
     clear: both;
+    border-top: solid 2px;
 }
 table{
     margin-top: 10px;
@@ -42,7 +43,12 @@ table td{
 img{
   max-width: 100%;
 }
-
+footer{
+  margin-top: 40px;
+}
+main{
+  margin-top: 40px;
+}
 /* Custom */
 
 #passwordMessage{
@@ -70,7 +76,8 @@ img{
 
 .homepage{
   background-color: black;
-  background-image: url("/bunjii/public/images/cover.jpg");
+  background-image: url("/bunjii/images/cover.jpg");
+  margin-top: -40px;
   background-size: cover;
   min-height: 600px;
 }

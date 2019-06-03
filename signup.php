@@ -1,7 +1,7 @@
 <?php
     $page_title = 'Sign Up';
-    require_once("../private/initialize.php");
-    include(SHARED_PATH . '/header.php');
+    require_once("initialize.php");
+    include('header.php');
     $name = isset($_GET['name']) ? $_GET['name'] : "";
     $email = isset($_GET['email']) ? $_GET['email'] : "";
 ?>
@@ -43,4 +43,4 @@
     </div>
 </div>
 
-<?php include(SHARED_PATH . '/footer.php'); ?>
+<?php include ('footer.php'); ?>

@@ -4,8 +4,8 @@
     $facilities = '';
     $about = '';
     $contact = '';
-    require_once ("../private/initialize.php");
-    include (SHARED_PATH.'/header.php');
+    require_once ("initialize.php");
+    include ('header.php');
 ?>
 
 <main class="homepage">
@@ -29,5 +29,12 @@
     </div>
   </div>
 </main>
+<section>
+  <div class="container">
+    <h1>FACILITIES</h1>
+    <hr class="bg-primary accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+  </div>
+</section>
 
-<?php include (SHARED_PATH.'/footer.php'); ?>
+
+<?php include ('footer.php'); ?>

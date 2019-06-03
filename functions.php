@@ -1,6 +1,6 @@
 <?php
 
-    require_once (PRIVATE_PATH."\database.php");
+    require_once ("database.php");
 
     function url_for($script_path){
         if($script_path[0] != '/'){

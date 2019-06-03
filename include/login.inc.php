@@ -1,6 +1,6 @@
 <?php
-    require_once ("../../private/initialize.php");
-    require_once ("../../private/database.php");
+    require_once ("../initialize.php");
+    require_once ("../database.php");
 
     if(isset($_POST['submit'])) {
 
@@ -9,6 +9,9 @@
 
         if (empty($email) || empty($password)) {
             redirect_to('../login.php?error=emptyfeilds&email=' . $email);
+        }
+        else if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            redirect_to('../login.php?error=invalidemail&name=' . $name);
         }
         else {
 

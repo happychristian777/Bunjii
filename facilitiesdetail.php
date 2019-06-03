@@ -5,11 +5,9 @@ $home = '';
 $facilities = 'active';
 $about = '';
 $contact = '';
-require_once ("../private/initialize.php");
-include (SHARED_PATH.'/header.php');
-
-require_once ("../private/initialize.php");
-require_once ("../private/database.php");
+require_once ("initialize.php");
+include ('header.php');
+require_once ("database.php");
 
 if(isset($_GET['id'])) {
 
@@ -76,4 +74,5 @@ if(isset($_GET['id'])) {
             <?php } ?>
     </div>
 
-<?php include (SHARED_PATH.'/footer.php'); ?>
+<?php include ('footer.php'); ?>
+
