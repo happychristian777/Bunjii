@@ -7,3 +7,4 @@
     require_once ("database.php");
 
     ?>
+    <h1>Hello</h1>
